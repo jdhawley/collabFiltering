@@ -1,4 +1,4 @@
-input_filename = "input.txt"
+input_filename = "testinput.txt"
 test_row = 2
 
 
