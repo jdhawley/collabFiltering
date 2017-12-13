@@ -241,8 +241,12 @@ def main():
 			row_number = int(input("Please enter the user (row) to predict: "))
 			col_number = int(input("Please enter the item (column) to predict: "))
 			predicted_score = get_predicted_score_model(row_number, col_number, ratings, average_ratings) + average_ratings[row_number]
-			print("The predicted score is: " + str(predicted_score) + "\n")
-	
+			print("The predicted score is: " + str(put_in_bucket(predicted_score)) + "\n")
+
+def put_in_bucket(flt):
+	if (flt > 5):
+		return 5
+	return int(flt)	
 
 if __name__ == "__main__":
     main()
